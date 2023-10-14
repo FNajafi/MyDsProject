@@ -1,0 +1,5 @@
+data/
+visualizations/
+workspace/
+Pipfile
+Pipfile.lock
