@@ -19,8 +19,8 @@ def GD (X , y, w, b, lr , epoch):
     m = len(y)
     for i in range (epoch):
         prediction = hypothesis (X)
-        dw = (1 / m) * np.sum ((prediction - y) * X ) 
-        db = (1 / m) * np.sum (prediction - y)
+        dw = (1 / m) * np.sum ((prediction - y) * X ) #this is the order partial derivtive of the cost function in respect to w
+        db = (1 / m) * np.sum (prediction - y)     #this is the order partial derivtive of the cost function in respect to b
         w -= lr * dw
         b -= lr * db
     return w, b 
