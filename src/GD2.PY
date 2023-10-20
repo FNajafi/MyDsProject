@@ -23,7 +23,7 @@ w2 = 0.1  # Weight for feature 2 (number of bedrooms)
 b = 0.1  # Bias
 
 # Hypothesis Function
-def hypothesis(x):
+def hypothesis(x):   #Passing (x) means we pass an entire row to the function and then later in the fucntion we unfoald the array by specifiying the x[0] and x[1]
     return w1 * x[0] + w2 * x[1] + b
 
 # Cost Function (Mean Squared Error)
@@ -35,7 +35,7 @@ def cost_function(X, y):
 # Gradient Descent
 def gradient_descent(X, y, w1, w2, b, learning_rate, num_iterations):
     m = len(y)
-    for _ in range(num_iterations):
+    for i in range(num_iterations):
         predictions = np.array([hypothesis(x) for x in X])
         dw1 = (1 / m) * np.sum((predictions - y) * X[:, 0])  # Derivative with respect to w1
         dw2 = (1 / m) * np.sum((predictions - y) * X[:, 1])  # Derivative with respect to w2

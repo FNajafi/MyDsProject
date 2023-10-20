@@ -51,5 +51,33 @@ predicted_price = hypothesis(new_house_size)
 print(f"Predicted price for a house with size {new_house_size} sq. ft: ${predicted_price:.2f}")
 
 # Step 9: Evaluation (MAE, RMSE, R-squared, etc. - not implemented here)
+def mean_abs_error (y_true , y_pred):
+    return np.mean (np.absolute(y_true - y_pred))
 
+def rt_mean_sqrt_error (y_true , y_pred):
+    return np.sqrt(np.mean(y_true - y_pred) **2)
+
+# Calculate R-squared (Coefficient of Determination)
+def r_squared(y_true, y_pred):
+    y_mean = np.mean(y_true)
+    ssr = np.sum((y_pred - y_true) ** 2)  # Sum of Squared Residuals
+    sst = np.sum((y_true - y_mean) ** 2)  # Total Sum of Squares
+    r2 = 1 - (ssr / sst)
+    return r2
+
+# Example usage:
+r_squared_value = r_squared(y, hypothesis(X))
+print(f"R-squared (R²) Score: {r_squared_value:.4f}")
+
+# R-squared ranges from 0 to 1, with 1 indicating a perfect fit.
+
+
+y_true = y 
+y_pred = hypothesis(X)
+
+mae = mean_abs_error (y_true , y_pred)
+rmse = rt_mean_sqrt_error (y_true , y_pred)
+
+print (f"mean abslout error is : {mae:.2f}")
+print (f" root mean square error is : {rmse:.2f}")
 # Step 10: Deployment (Not covered in this basic example)
