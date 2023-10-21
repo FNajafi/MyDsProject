@@ -12,7 +12,7 @@ def hypothesis (x):
 def cost_func (X , y):
     m = len (y)
     prediction = hypothesis (X)
-    return (1/(2*m)) * np.sum((prediction - y)** 2)
+    return (1/(2*m)) * np.sum((prediction - y) ** 2)
 
 def GD (X , y, w, b, lr, epoch):
     m = len (y)
