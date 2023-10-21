@@ -16,8 +16,8 @@ def cost_func (X , y):
 
 def GD (X , y, w, b, lr, epoch):
     m = len (y)
+    prediction = hypothesis (X)
     for i in range (epoch):
-        prediction = hypothesis (X)
         dw = (1 / m) * np.sum((prediction - y) * X)
         wb = (1/ m) * np.sum((prediction - y))
         w -= lr * dw
@@ -31,3 +31,4 @@ w, b = GD (X, y, w, b, lr, epoch)
 new_house = 2000
 new_house_price = hypothesis (new_house)
 print (f"the house with {new_house} sqr feet price is $: {new_house_price:.2f}")
+
