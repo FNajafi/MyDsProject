@@ -18,8 +18,8 @@ def GD (X , y, w, b, lr, epoch):
     m = len (y)
     for i in range (epoch):
         prediction = hypothesis (X)
-        dw = (1 / m) * np.sum(prediction - y) * X
-        wb = (1/ m) * np.sum(prediction - y)
+        dw = (1 / m) * np.sum((prediction - y) * X)
+        wb = (1/ m) * np.sum((prediction - y))
         w -= lr * dw
         b -= lr * wb
     return w, b
