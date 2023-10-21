@@ -54,4 +54,4 @@ w1, w2, b = gradient_descent(X, y, w1, w2, b, learning_rate, num_iterations)
 new_house_size = 2000
 new_bedrooms = 4
 predicted_price = hypothesis([new_house_size, new_bedrooms])
-print(f"Predicted price for a house with size {new_house_size} sq. ft and {new_bedrooms} bedrooms: ${predicted_price:.2f}")
+print(f"Predicted price for a house with size {new_house_size} sq. ft and {new_bedrooms} bedrooms: ${predicted_price[0]:.2f}")
