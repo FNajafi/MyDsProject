@@ -14,11 +14,12 @@ X = np.array([
     [1700, 2]
 ])
 
+
 # Sample target data (house prices)
 y = np.array([245000, 312000, 279000, 308000, 199000, 219000, 405000, 324000, 319000, 255000])
 
 # Initialize model parameters
-w1 = 0.1  # Weight for feature 1 (size)
+w1 = 0.1    # Weight for feature 1 (size)
 w2 = 0.1  # Weight for feature 2 (number of bedrooms)
 b = 0.1  # Bias
 
