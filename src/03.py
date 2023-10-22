@@ -58,8 +58,9 @@ print (f"the house with the size of {new_house_size} , and {new_house_bed} bedro
 
 #Evaluation of the model 
 
-y_actual = np.rray([y])
+y_actual = y
 y_pred = np.array([hypothesis(x) for x in X])
 
 def MAE (y_pred , y_actual):
-    np.mean(np.absolute(y_actual - y_pred))
+    return np.mean(np.absolute(y_actual - y_pred))
+print (f"the MAE of is : {MAE(y_pred, y_actual)}")
