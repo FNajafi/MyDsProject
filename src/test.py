@@ -30,4 +30,4 @@ w, b = GD (X, y, w, b, lr, epoch)
 
 new_house = 2000
 new_house_price = hypothesis (new_house)
-print (f"the house with {new_house} sqr feet price is $: {new_house_price:.2f}"
+print (f"the house with {new_house} sqr feet price is $: {new_house_price:.2f}")
